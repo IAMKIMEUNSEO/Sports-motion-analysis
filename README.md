@@ -12,6 +12,7 @@
 ## 02. 프로젝트 분석 및 결과
 ### (1) 손끝닿기
 - 가장 굽혔을 때의 각도를 기준으로 약 +3도 이하일 때를 동작 유지 시간으로 지정
+![elbow_flexion_angle](graph_img/elbow_flexion_angle.png)
 ```python
 print("가장 굽혔을 때 각도: %.2f" % df_foot['각도'].min())   #가장 굽혔을 때 각도: 67.71
 
@@ -27,6 +28,7 @@ print('각도가 70도 이하일 때 유지 시간: %.2f(ms)' % foot_time)   #�
 ### (2) 허리 뒤로 젖히기
 - 가장 젖혔을 때의 각도를 기준으로 약 +3도 이하일 때를 동작 유지 시간으로 지정
 - 단, 허리를 앞으로 숙인 경우 마이너스가 나오기 때문에 'angle' 값이 양수일 때를 기준으로 함
+![angle_of_standing_backbend_pose](graph_img/angle_of_standing_backbend_pose.png)
 ```python
 print("가장 굽혔을 때 각도: %.2f" % df_waist[df_waist["angle"] >= 0]["angle"].min())    #가장 굽혔을 때 각도: 135.99
 
