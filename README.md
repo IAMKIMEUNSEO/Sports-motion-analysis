@@ -30,13 +30,13 @@ print('각도가 70도 이하일 때 유지 시간: %.2f(ms)' % foot_time)   #�
 ```python
 print("가장 굽혔을 때 각도: %.2f" % df_waist[df_waist["angle"] >= 0]["angle"].min())    #가장 굽혔을 때 각도: 135.99
 
-#'angle'이 137도 이하인 경우의 시간(초) 값 필터링
-waist_time_filter = df_waist[(df_waist['angle'] > 0) & (df_waist['angle'] <= 137)]['시간(초)']
-print(waist_time_filter.max(), waist_time_filter.min()) #7.15 5.817
+#'angle'이 138도 이하인 경우의 시간(초) 값 필터링
+waist_time_filter = df_waist[(df_waist['angle'] > 0) & (df_waist['angle'] <= 138)]['시간(초)']
+print(waist_time_filter.max(), waist_time_filter.min()) #7.25 4.85
 
 #동작 유지 시간
 waist_time = waist_time_filter.max() - waist_time_filter.min()
-print('각도가 137도 이하일 때 유지 시간: %.2f(s)' % waist_time) #각도가 137도 이하일 때 유지 시간: 1.33(s)
+print('각도가 138도 이하일 때 유지 시간: %.2f(s)' % waist_time) #각도가 138도 이하일 때 유지 시간: 2.40(s)
 ```
 
 ## 결론
